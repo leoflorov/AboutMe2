@@ -16,6 +16,10 @@
     <string name="date_of_birth">Дата рождения</string>
     <string name="place_of_birth">Место рождения</string>
     <string name="place_of_work">Место работы</string>
+    <string name="checkbox1">CheckBox</string>
+    <string name="buttonPicture">Кнопка картинка</string>
+    <string name="androidImageButton">Кнопка Андроид</string>
+    <string name="myPhotoMain">Моя фотография</string>
     <string-array name= "my_skill">
         <item>1) Java</item>
         <item>2) Начинающий разработчик Android приложений</item>

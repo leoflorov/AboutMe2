@@ -17,6 +17,7 @@
         android:layout_height="wrap_content" />
 
     <ImageView
+        android:contentDescription="@string/myPhotoMain"
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:id="@+id/mp"
@@ -90,6 +91,7 @@
         android:layout_toEndOf="@+id/section_label" />
 
     <ImageView
+        android:contentDescription="@string/buttonPicture"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:id="@+id/imageView"
@@ -110,13 +112,14 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CheckBox"
+        android:text="@string/checkbox1"
         android:id="@+id/checkBox"
         android:checked="true"
         android:layout_below="@+id/simple_text"
         android:layout_alignStart="@+id/textView_email" />
 
     <ImageButton
+        android:contentDescription="@string/androidImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">"About Me "</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="my_fio">Флоров Леонид\nСергеевич</string>
+    <string name="my_email">leoflorov@gmail.com</string>
+    <string name="primer_txt3">Пример текста 3</string>
+    <string name="primer_txt2">Пример текста 2</string>
+    <string name="primer_txt1">Пример текста 1</string>
+    <string name="sample_txt">Пример текста 1</string>
+    <string name="simple_text">Простой текст</string>
+    <string name="secondActivityHeaderText">Я только учусь. Это можно стереть ;)</string>
+    <string name="roundButton_1">Кнопка 1</string>
+    <string name="roundButton_0">Кнопка 0</string>
+    <string name="secondactivityMainHeader">Второй Activity</string>
+    <string name="date_of_birth">Дата рождения</string>
+    <string name="place_of_birth">Место рождения</string>
+    <string name="place_of_work">Место работы</string>
+    <string-array name= "my_skill">
+        <item>1) Java</item>
+        <item>2) Начинающий разработчик Android приложений</item>
+        <item>3) С/AL</item>
+        <item>4) Microsoft Dynamics NAV</item>
+        <item>5) Active Directory</item>
+        <item>6) Серверы и сети</item>
+    </string-array>
+</resources>

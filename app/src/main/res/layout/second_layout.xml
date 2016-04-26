@@ -31,24 +31,12 @@
         android:id="@+id/ratingBar"
         android:layout_gravity="center_horizontal" />
 
-    <RadioButton
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/roundButton_0"
-        android:id="@+id/radioButton"
-        android:checked="false" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/roundButton_1"
-        android:id="@+id/radioButton2"
-        android:checked="false" />
-
-    <CalendarView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/calendarView"
+        android:text="@string/showMyInfo"
         android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

@@ -2,6 +2,7 @@ package leodevelopments.aboutme2;
 
 import android.content.Intent;
 import android.media.Image;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,19 +19,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageButton buttonAndroid = (ImageButton) findViewById(R.id.imageButton);
-        featuresNew = (ImageButton)findViewById(R.id.secondViewTestText);
-        buttonAndroid.setOnClickListener(new View.OnClickListener(){
+        featuresNew = (ImageButton) findViewById(R.id.secondViewTestText);
+        buttonAndroid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
             }
         });
 
 
-
         String[] array = this.getResources().getStringArray(R.array.my_skill);
-        TextView textView = (TextView)findViewById(R.id.arrayView);
+        TextView textView = (TextView) findViewById(R.id.arrayView);
 
         StringBuilder sBuilder = new StringBuilder();
 

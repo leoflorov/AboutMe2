@@ -20,6 +20,7 @@
     <string name="buttonPicture">Кнопка картинка</string>
     <string name="androidImageButton">Кнопка Андроид</string>
     <string name="myPhotoMain">Моя фотография</string>
+    <string name="showMyInfo">Показать инфо</string>
     <string-array name= "my_skill">
         <item>1) Java</item>
         <item>2) Начинающий разработчик Android приложений</item>

@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,18 +60,20 @@ public class SecondActivity extends AppCompatActivity {
     public void onClick(View v) {
         ad.show();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
 
         TextView infoTextView = (TextView) findViewById(R.id.secondViewTestText);
-        switch(id) {
+        switch (id) {
             case R.id.action_cat1:
                 infoTextView.setText(actionCat1);
                 return true;
@@ -83,10 +87,19 @@ public class SecondActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
     public void onSettingsMenuClick(MenuItem item) {
         TextView infoTextView = (TextView) findViewById(R.id.secondViewTestText);
         infoTextView.setText(menuClickText);
     }
+//
+//    ListView listView = (ListView) findViewById(R.id.listView);
+//    String[] mySkillsList = getResources().getStringArray(R.array.my_skill);
+//    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, mySkillsList);
+//    public void setAdapter(ArrayAdapter<String> adapter) {
+//        this.adapter = adapter;
+//    }
 }
+
 
 

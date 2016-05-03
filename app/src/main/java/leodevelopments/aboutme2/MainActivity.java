@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initViews();
+        initData();
 
         ImageButton buttonAndroid = (ImageButton) findViewById(R.id.imageButton);
         featuresNew = (ImageButton) findViewById(R.id.secondViewTestText);

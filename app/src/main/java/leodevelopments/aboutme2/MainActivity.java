@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
-        initData();
 
         ImageButton buttonAndroid = (ImageButton) findViewById(R.id.imageButton);
         featuresNew = (ImageButton) findViewById(R.id.secondViewTestText);
@@ -40,3 +40,4 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(sBuilder.toString());
     }
 }
+

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,11 +22,32 @@ public class SecondActivity extends AppCompatActivity {
     String actionCat2 = "город Москва";
     String actionCat3 = "компания KupiVip";
     String menuClickText = "Тут должны были быть Настройки, но пока я их не сделал. Соррян :)";
+  //  String[] mySkillsList = getResources().getStringArray(R.array.my_skill); <--- Падает второе
+  // активити(приложение) при нажатии на imageButton
+    String[] mySkillsList = {"Начинающий Android разработчик", "C/AL", "Microsoft Dynamics NAV",
+          "Серверы и сети", "Настройка Windows", "Active directory", "Тех.поддержка", "Java"};
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
+
+        ListView list = (ListView) findViewById(R.id.list);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, mySkillsList);
+
+        assert list != null;
+        list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View itemClicked, int position,
+                                    long id) {
+                Toast.makeText(getApplicationContext(), ((TextView) itemClicked).getText(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
         context = SecondActivity.this;
         String title = "Это моё приложение";
@@ -34,8 +56,8 @@ public class SecondActivity extends AppCompatActivity {
         String button2String = "Слабоватенько";
 
         ad = new AlertDialog.Builder(context);
-        ad.setTitle(title);  // заголовок
-        ad.setMessage(message); // сообщение
+        ad.setTitle(title);
+        ad.setMessage(message);
         ad.setPositiveButton(button1String, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int arg1) {
                 Toast.makeText(context, "Спасибо на добром слове, оно будет ещё лучше",
@@ -75,12 +97,15 @@ public class SecondActivity extends AppCompatActivity {
         TextView infoTextView = (TextView) findViewById(R.id.secondViewTestText);
         switch (id) {
             case R.id.action_cat1:
+                assert infoTextView != null;
                 infoTextView.setText(actionCat1);
                 return true;
             case R.id.action_cat2:
+                assert infoTextView != null;
                 infoTextView.setText(actionCat2);
                 return true;
             case R.id.action_cat3:
+                assert infoTextView != null;
                 infoTextView.setText(actionCat3);
                 return true;
             default:
@@ -90,15 +115,9 @@ public class SecondActivity extends AppCompatActivity {
 
     public void onSettingsMenuClick(MenuItem item) {
         TextView infoTextView = (TextView) findViewById(R.id.secondViewTestText);
+        assert infoTextView != null;
         infoTextView.setText(menuClickText);
     }
-//
-//    ListView listView = (ListView) findViewById(R.id.listView);
-//    String[] mySkillsList = getResources().getStringArray(R.array.my_skill);
-//    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, mySkillsList);
-//    public void setAdapter(ArrayAdapter<String> adapter) {
-//        this.adapter = adapter;
-//    }
 }
 
 
